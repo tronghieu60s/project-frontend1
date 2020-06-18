@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+}
+
+.header__navbar .navbar-toggler .fa {
+  color: #000;
+}
+
+.header__navbar__social {
+  flex-direction: row;
+}
+
+.header__navbar .header__navbar__menu .nav-item {
+  padding: 0 11px;
+}
+
+.header__navbar .nav-link {
+  color: #000 !important;
+  font-size: 19px;
+  transition: 0.4s;
+}
+
+.header__navbar .nav-link:hover {
+  color: #1f5dea !important;
+}
+
+.header__navbar .nav-link .badge-pill {
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 4px;
+  transform: translateY(-9px);
+}
+
+.header__navbar .navbar-brand img {
+  width: 136px;
+  margin-left: 20px;
+}
+
+.header__navbar {
+  padding: 2rem 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.header__topbar {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+@media (max-width: 992px) {
+  .header__topbar {
+    border: 0 !important;
+    padding: 0;
+  }
+
+  .header__navbar__social .nav-item {
+    margin: 0 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+.header__topbar .nav-link {
+  font-size: 13.5px;
+  color: #333333 !important;
+  transition: 0.4s;
+}
+
+.header__topbar .nav-link:hover {
+  color: #1f5dea !important;
+}

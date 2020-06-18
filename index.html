@@ -14,16 +14,11 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <!-- Header -->
-        <header>
-            <nav class="navbar navbar-expand-md navbar-light border-bottom">
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light header__topbar">
+                <div class="collapse navbar-collapse" id="header__topbar">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">CONTACT US</a>
@@ -36,47 +31,37 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> CART</a>
+                        <li class="nav-item active mr-3">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i>
+                                CART</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="#"><i class="fa fa-envelope-o mr-2" aria-hidden="true"></i> ABOUT
+                                SUBSCRIBE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> ABOUT
-                                SAXON</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                                PRIVACY POLICY</a>
+                            <a class="nav-link" href="#"><i class="fa fa-chevron-circle-right mr-2"
+                                    aria-hidden="true"></i>
+                                PURCHASE THEME</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="public/images/logo.png" alt=""></a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reviews <span
-                                    class="badge badge-pill badge-primary">NEW</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mt-2 mt-lg-0">
+        </div>
+        <div class="container-fluid">
+            <nav class="row navbar navbar-expand-lg navbar-light header__navbar">
+                <div class="col-6 col-lg-2 d-flex order-lg-1">
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="public/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-6 col-lg-2 d-flex order-lg-3">
+                    <ul class="header__navbar__social navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
                             <a class="nav-link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
@@ -90,108 +75,186 @@
                             <a class="nav-link" href="#"><i class="fa fa-medium" aria-hidden="true"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="#"><i class="fa fa-search border-left pl-2" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
+                <div class="col-8 order-lg-2">
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="header__navbar__menu navbar-nav mx-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Reviews <span
+                                        class="badge badge-pill badge-primary">NEW</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-        </header>
-        <!-- End Header -->
+        </div>
+    </header>
+    <!-- End Header -->
 
-        <!-- Main -->
-        <main>
-            <section>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="post">
-                                    <div class="post__wrapper">
-                                        <img src="public/images/saxon-005-006-1140x694.jpg" alt="">
-                                        <div class="post__wrapper__categories">
-                                            <a href="">Video</a>
-                                        </div>
-                                        <div class="post__wrapper__rating">9.0</div>
-                                        <div class="post__wrapper_icon">
-                                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                                        </div>
+    <!-- Main -->
+    <main>
+        <section>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post">
+                                <div class="post__wrapper">
+                                    <img src="public/images/saxon-005-006-1140x694.jpg" alt="">
+                                    <div class="post__wrapper__categories">
+                                        <a href="">Video</a>
                                     </div>
-                                    <div class="post__details">
-                                        <div class="post__details__title">Battlefield 5 Day-One Update Now Live For PC</div>
-                                        <div class="post__details__author">
-                                            <div class="post__details__author__image">
-                                                <img src="public/images/team-3-56x56.png" alt="">
-                                            </div>
-                                            By <a href="#">Saxon Matney</a>
-                                        </div>
-                                        <div class="post__details__date">October 26, 2018</div>
-                                        <div class="post__details__excerpt">
-                                            Certainly, they are not an answer to everything. The key feature of a website
-                                            generator lies in universality. In principle, they should meet the requirements and
-                                            expectations of the majority. When it comes to situations when you require something
-                                            special or unique, this isn’t the option for you. What’s more, often the builders
-                                            fail to provide all the essential stuff free. Building the…
-                                        </div>
+                                    <div class="post__wrapper__rating">9.0</div>
+                                    <div class="post__wrapper_icon">
+                                        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="post">
-                                    <div class="post__wrapper">
-                                        <img src="public/images/saxon-005-012-1140x619.jpg" alt="">
-                                        <div class="post__wrapper__categories">
-                                            <a href="">PC</a>
-                                            <a href="">Video</a>
+                                <div class="post__details">
+                                    <div class="post__details__title">Battlefield 5 Day-One Update Now Live For PC</div>
+                                    <div class="post__details__author">
+                                        <div class="post__details__author__image">
+                                            <img src="public/images/team-3-56x56.png" alt="">
                                         </div>
-                                        <div class="post__wrapper_icon">
-                                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                                        </div>
+                                        By <a href="#">Saxon Matney</a>
                                     </div>
-                                    <div class="post__details">
-                                        <div class="post__details__title">Fornite Battle Royale - Season 6, Trip Battle Star Guide</div>
-                                        <div class="post__details__author">
-                                            <div class="post__details__author__image">
-                                                <img src="public/images/team-3-56x56.png" alt="">
-                                            </div>
-                                            By <a href="#">Saxon Matney</a>
-                                        </div>
-                                        <div class="post__details__date">October 26, 2018</div>
-                                    </div>
-                                </div>
-                                <div class="post">
-                                    <div class="post__wrapper">
-                                        <img src="public/images/saxon-005-006-1140x694.jpg" alt="">
-                                        <div class="post__wrapper__categories">
-                                            <a href="">PC</a>
-                                            <a href="">REVIEWS</a>
-                                        </div>
-                                        <div class="post__wrapper__rating">7.0</div>
-                                        <div class="post__wrapper_icon">
-                                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div class="post__details">
-                                        <div class="post__details__title">Will Red Dead Redemption 2 Come To PC</div>
-                                        <div class="post__details__author">
-                                            <div class="post__details__author__image">
-                                                <img src="public/images/team-3-56x56.png" alt="">
-                                            </div>
-                                            By <a href="#">Saxon Matney</a>
-                                        </div>
-                                        <div class="post__details__date">October 26, 2018</div>
+                                    <div class="post__details__date">October 26, 2018</div>
+                                    <div class="post__details__excerpt">
+                                        Certainly, they are not an answer to everything. The key feature of a website
+                                        generator lies in universality. In principle, they should meet the requirements
+                                        and
+                                        expectations of the majority. When it comes to situations when you require
+                                        something
+                                        special or unique, this isn’t the option for you. What’s more, often the
+                                        builders
+                                        fail to provide all the essential stuff free. Building the…
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-
+                        <div class="col-md-6">
+                            <div class="post">
+                                <div class="post__wrapper">
+                                    <img src="public/images/saxon-005-012-1140x619.jpg" alt="">
+                                    <div class="post__wrapper__categories">
+                                        <a href="">PC</a>
+                                        <a href="">Video</a>
+                                    </div>
+                                    <div class="post__wrapper_icon">
+                                        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="post__details">
+                                    <div class="post__details__title">Fornite Battle Royale - Season 6, Trip Battle Star
+                                        Guide</div>
+                                    <div class="post__details__author">
+                                        <div class="post__details__author__image">
+                                            <img src="public/images/team-3-56x56.png" alt="">
+                                        </div>
+                                        By <a href="#">Saxon Matney</a>
+                                    </div>
+                                    <div class="post__details__date">October 26, 2018</div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="post__wrapper">
+                                    <img src="public/images/saxon-005-006-1140x694.jpg" alt="">
+                                    <div class="post__wrapper__categories">
+                                        <a href="">PC</a>
+                                        <a href="">REVIEWS</a>
+                                    </div>
+                                    <div class="post__wrapper__rating">7.0</div>
+                                    <div class="post__wrapper_icon">
+                                        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="post__details">
+                                    <div class="post__details__title">Will Red Dead Redemption 2 Come To PC</div>
+                                    <div class="post__details__author">
+                                        <div class="post__details__author__image">
+                                            <img src="public/images/team-3-56x56.png" alt="">
+                                        </div>
+                                        By <a href="#">Saxon Matney</a>
+                                    </div>
+                                    <div class="post__details__date">October 26, 2018</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        <!-- End Main  -->
-    </div>
+                <div class="col-md-4">
+                    <div class="post">
+                        <div class="post__categories">
+                            <a href="">PC</a>
+                            <a href="">REVIEWS</a>
+                        </div>
+                        <div class="post__details">
+                            <div class="post__details__title">The Game Awards 2018 nominations have been announced</div>
+                            <div class="post__details__date">October 25, 2018</div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post__categories">
+                            <a href="">PC</a>
+                            <a href="">XBOX ONE</a>
+                        </div>
+                        <div class="post__details">
+                            <div class="post__details__title">Fallout 76 players launch nuke and unleash massive Queen
+                            </div>
+                            <div class="post__details__date">October 26, 2018</div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post__categories">
+                            <a href="">PC</a>
+                        </div>
+                        <div class="post__details">
+                            <div class="post__details__title">The Legend of Spyro: Dawn of the Dragon (2008)</div>
+                            <div class="post__details__date">October 26, 2018</div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post__categories">
+                            <a href="">PC</a>
+                            <a href="">VIDEO</a>
+                        </div>
+                        <div class="post__details">
+                            <div class="post__details__title">Call of Duty: Black Ops 4 - new releases and trailer</div>
+                            <div class="post__details__date">October 26, 2018</div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post__categories">
+                            <a href="">VIDEO</a>
+                        </div>
+                        <div class="post__details">
+                            <div class="post__details__title">Typography Classic Post - standard elements for writers
+                                and bloggers</div>
+                            <div class="post__details__date">October 21, 2018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <img src="public/images/ASD-promo.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main  -->
 </body>
 
 </html>
