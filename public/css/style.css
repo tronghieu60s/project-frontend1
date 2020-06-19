@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 * {
+}
+
+.sidebar .post__details__date {
+    margin-top: .3rem;
+    color: #868686;
 }
 
 .sidebar .post {
@@ -11,8 +15,10 @@
 }
 
 .post__details__excerpt {
-  font-size: 19px;
-  color: #333;
+  font-size: 18.5px;
+  font-weight: 400;
+  color: hsla(0, 0%, 44%, 1);
+  padding: 0 2.5rem;
 }
 
 .post__details__info {
@@ -35,6 +41,11 @@
 
 .post__details__info__author a {
   color: #868686;
+  transition: .4s;
+}
+
+.post__details__info__author a:hover {
+    color: #1f5dea;
 }
 
 a {
@@ -49,13 +60,14 @@ a:hover {
 .post__details__title {
   color: #040b1b;
   display: block;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
   transition: .4s;
 }
 
 .sidebar .post__details__title {
     font-size: 21px;
+    letter-spacing: -1px;
 }
 
 .post__details__title:hover {
@@ -96,11 +108,11 @@ a:hover {
 }
 
 .post__wrapper__categories a, .post__categories a {
-  background-color: red;
-  font-size: 13px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12.5px;
+  font-weight: 500;
   color: white;
-  padding: 2px 9px;
+  padding: 3px 9px;
   border-radius: 5px;
   text-transform: uppercase;
 }
@@ -118,7 +130,7 @@ a:hover {
   width: 100%;
   height: 218px;
   position: relative;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
 }
