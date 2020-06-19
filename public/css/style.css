@@ -2,8 +2,67 @@
   font-family: "Nunito", sans-serif;
 }
 
+.widget__social {
+    list-style-type: none;
+    padding: 0;
+}
+
+.widget__social li {
+    display: inline-block;
+}
+
+.post.post--col2 .post__details__info {
+    margin: 0;
+}
+
+.widget__categories__item {
+    display: flex;
+    justify-content: space-between;
+    color: #fff !important;
+    background-color: #1e59e0;
+    font-size: 15px;
+    padding: 18px;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: .4s;
+}
+
+.widget__categories__item:hover {
+    background-color: #000 !important;
+}
+
+.widget__categories {
+    list-style-type: none;
+    padding: 0;
+}
+
+.widget__title {
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #dee2e6;
+  margin-bottom: 30px;
+}
+
+.loadMore {
+  display: block;
+  margin: auto;
+  font-size: 13px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  background-color: #dfe6f2;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.loadMore:hover {
+  color: #FFF;
+  background-color: #1F5DEA;
+}
+
 .post.post--image {
-    position: relative;
+  position: relative;
 }
 
 .post.post--image .post__wrapper:after {
@@ -20,10 +79,6 @@
 
 .post.post--image:hover .post__wrapper:after {
   background-color: hsla(0, 0%, 0%, 0.58);
-}
-
-.block .post {
-  margin-bottom: 3rem;
 }
 
 .block__title {
@@ -44,8 +99,12 @@
   margin-top: .5rem;
 }
 
+.post.post--col2 .post__details {
+  width: 90%;
+}
+
 .post__details__excerpt {
-  font-size: 18.5px;
+  font-size: 18px;
   font-weight: 400;
   color: hsla(0, 0%, 44%, 1);
   line-height: 30px;
@@ -82,6 +141,21 @@ a {
   color: #000;
 }
 
+.widget__social__item {
+    color: #fff;
+    background-color: #000;
+    font-size: 20px;
+    padding: 10px 18px 8px 18px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: .4s;
+}
+
+.widget__social__item:hover {
+    color: #fff;
+    background-color: #1F5DEA;
+}
+
 a:hover {
   color: #000;
   text-decoration: none;
@@ -98,6 +172,10 @@ a:hover {
 .sidebar .post__details__title {
   font-size: 21px;
   letter-spacing: -1px;
+}
+
+.post.post--col2 .post__details__title {
+  font-size: 19px;
 }
 
 .post__details__title:hover {
@@ -127,15 +205,20 @@ a:hover {
 }
 
 .post__wrapper_icon {
+  width: 64px;
+  height: 64px;
   color: white;
-  font-size: 25px;
+  font-size: 24px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 11px 15px 8px 20px;
-  border: 3px solid;
+  border: 3px solid #ffffff;
   border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 58px;
 }
 
 .post__wrapper__rating {
@@ -186,13 +269,23 @@ a:hover {
   transform: scale(1.0);
 }
 
-
 .post__wrapper {
   width: 100%;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.widget__post .post__wrapper {
+    height: 167px;
+}
+
+.post.post--col2 .post__wrapper {
+  width: 60%;
+  height: 77px;
+  margin-right: 24px;
+  margin-top: 6px;
 }
 
 .header__navbar .navbar-toggler .fa {
@@ -264,4 +357,14 @@ body {
 
 .header__topbar .nav-link:hover {
   color: #1f5dea !important;
+}
+
+.post__col2 {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.widget__post {
+  list-style-type: none;
+  padding: 0;
 }
