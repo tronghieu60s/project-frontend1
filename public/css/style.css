@@ -138,6 +138,8 @@
   align-items: center;
 }
 
+.carousel .post__details__info {display: block;text-align: right;}
+
 .post__details__info__author__image {
   width: 25px;
   border-radius: 50%;
@@ -147,6 +149,11 @@
 .post__details__info__author {
   display: inline-flex;
   align-items: center;
+}
+
+.carousel .post__details__info__author, .carousel .post__details__info__date {
+    display: inline-block;
+    margin-top: 6px;
 }
 
 .post__details__info__author a {
@@ -190,6 +197,11 @@ a:hover {
   transition: 0.4s;
 }
 
+.carousel .post__details__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .sidebar .post__details__title {
   font-size: 21px;
   letter-spacing: -1px;
@@ -205,6 +217,13 @@ a:hover {
 
 .post__details {
   margin-top: 1.5rem;
+}
+
+.carousel .post__details {
+    font-size: 13px;
+    margin-top: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .post.post--image .post__details {
@@ -261,6 +280,12 @@ a:hover {
   top: 12%;
   left: 8%;
   z-index: 10;
+}
+
+.carousel .post__wrapper__categories {
+    width: 90%;
+    position: relative;
+    text-align: right;
 }
 
 .post.post--image .post__wrapper__categories {
