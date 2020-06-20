@@ -164,7 +164,7 @@ a:hover {
 .post__details__title {
   color: #040b1b;
   display: block;
-  font-size: 27px;
+  font-size: 26px;
   font-weight: 700;
   transition: .4s;
 }
@@ -175,7 +175,7 @@ a:hover {
 }
 
 .post.post--col2 .post__details__title {
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .post__details__title:hover {
@@ -183,7 +183,7 @@ a:hover {
 }
 
 .post__details {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .post.post--image .post__details {
@@ -191,17 +191,18 @@ a:hover {
   top: 50%;
   left: 50%;
   text-align: center;
-  width: 53%;
+  width: 75%;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
 
 .post.post--image .post__details__title, .post.post--image .post__details__info, .post.post--image a {
+  font-size: 85%;
   color: #fff !important;
 }
 
 .post.post--image .post__details__title {
-  font-size: 37px;
+  font-size: 137%;
 }
 
 .post__wrapper_icon {
@@ -241,7 +242,7 @@ a:hover {
 }
 
 .post.post--image .post__wrapper__categories {
-  top: 26%;
+  top: 32%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -257,6 +258,10 @@ a:hover {
 }
 
 .post__wrapper__image {
+  display: block;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
   border-radius: 5px;
   transition: 0.8s;
 }
@@ -271,6 +276,7 @@ a:hover {
 
 .post__wrapper {
   width: 100%;
+  height: 240px;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
