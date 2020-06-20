@@ -2,6 +2,55 @@
   font-family: "Nunito", sans-serif;
 }
 
+button.btn.btn-primary.btn-lg {
+    font-size: 14px;
+    background-color: #1F5DEA;
+    padding: 9px 28px;
+}
+
+button.btn.btn-primary.btn-lg:hover {
+    background-color: #000;
+}
+
+.footer__list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer__list.footer__list--social a {
+    display: inline-block;
+    margin-right: 9px;
+}
+
+.footer__list a {
+    display: block;
+    font-weight: 800;
+    transition: .4s;
+    margin-bottom: 10px;
+}
+
+.footer__list a:hover {
+    color: #868686;
+}
+
+.footer__copyright {
+    font-size: 17px;
+}
+
+.footer__logo {
+    width: 165px;
+}
+
+.footer__description {
+    line-height: 32px;
+}
+
+.footer {
+    font-size: 18.2px;
+    color: #868686;
+}
+
 .post__details__bottom__social {
     width: 50%;
     text-align: center;
