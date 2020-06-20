@@ -1,3 +1,16 @@
+$color-black: #000;
+$color-black2: #333;
+$color-black3: #040b1b;
+$color-gray: #868686;
+$color-white: #fff;
+$color-blue: #1f5dea;
+
+@mixin P-Absolute($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
 * {
   font-family: "Nunito", sans-serif;
 }
@@ -5,13 +18,13 @@
 /* CSS Tags */
 body {
   color: #333;
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 a {
-  color: #000;
+  color: $color-black;
   &:hover {
-    color: #000;
+    color: $color-black;
     text-decoration: none;
   }
 }
@@ -19,10 +32,10 @@ a {
 /* CSS Bootstrap */
 button.btn.btn-primary.btn-lg {
   font-size: 14px;
-  background-color: #1f5dea;
+  background-color: $color-blue;
   padding: 9px 28px;
   &:hover {
-    background-color: #000;
+    background-color: $color-black;
   }
 }
 
@@ -31,11 +44,11 @@ button.btn.btn-primary.btn-lg {
   &__navbar {
     padding: 2rem 0;
     .nav-link {
-      color: #000 !important;
+      color: $color-black !important;
       font-size: 19px;
       transition: 0.4s;
       &:hover {
-        color: #1f5dea !important;
+        color: $color-blue !important;
       }
       .badge-pill {
         font-size: 11px;
@@ -49,7 +62,7 @@ button.btn.btn-primary.btn-lg {
       margin-left: 20px;
     }
     .navbar-toggler .fa {
-      color: #000;
+      color: $color-black;
     }
     &__menu .nav-item {
       padding: 0 11px;
@@ -60,12 +73,14 @@ button.btn.btn-primary.btn-lg {
   }
   &__topbar {
     .nav-link {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #333333 !important;
+      font: {
+        size: 13.5px;
+        weight: 500;
+      }
+      color: $color-black2 !important;
       transition: 0.4s;
       &:hover {
-        color: #1f5dea !important;
+        color: $color-blue !important;
       }
     }
   }
@@ -86,21 +101,21 @@ button.btn.btn-primary.btn-lg {
     &__image {
       display: block;
       height: 100%;
-      background-size: cover;
-      background-position: 50% 50%;
+      background: {
+        size: cover;
+        position: 50% 50%;
+      }
       border-radius: 5px;
       transition: 0.8s;
     }
     &__icon {
       width: 64px;
       height: 64px;
-      color: white;
+      color: $color-white;
       font-size: 24px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include P-Absolute(50%, 50%);
       transform: translate(-50%, -50%);
-      border: 3px solid #ffffff;
+      border: 3px solid $color-white;
       border-radius: 50%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -108,8 +123,8 @@ button.btn.btn-primary.btn-lg {
       line-height: 58px;
     }
     &__rating {
-      background-color: #1f5dea;
-      color: white;
+      background-color: $color-blue;
+      color: $color-white;
       line-height: 21px;
       position: absolute;
       top: 7%;
@@ -119,37 +134,35 @@ button.btn.btn-primary.btn-lg {
       z-index: 10;
     }
     &__categories {
-      position: absolute;
-      top: 12%;
-      left: 8%;
+      @include P-Absolute(12%, 8%);
       z-index: 10;
     }
   }
   &__details {
     margin-top: 1.5rem;
     &__title {
-      color: #040b1b;
+      color: $color-black3;
       display: block;
       font-size: 26px;
       font-weight: 700;
       transition: 0.4s;
       &:hover {
-        color: #1f5dea;
+        color: $color-blue;
       }
     }
     &__info {
       display: inline-flex;
-      color: #868686;
+      color: $color-gray;
       margin: 18px 0;
       align-items: center;
       &__author {
         display: inline-flex;
         align-items: center;
         a {
-          color: #868686;
+          color: $color-gray;
           transition: 0.4s;
           &:hover {
-            color: #1f5dea;
+            color: $color-blue;
           }
         }
         &__image {
@@ -211,9 +224,7 @@ button.btn.btn-primary.btn-lg {
         content: "";
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include P-Absolute(0, 0);
         background-color: hsla(0, 0%, 0%, 0.36);
         z-index: 5;
         transition: 0.4s;
@@ -225,9 +236,7 @@ button.btn.btn-primary.btn-lg {
       }
     }
     .post__details {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include P-Absolute(50%, 50%);
       text-align: center;
       width: 75%;
       transform: translate(-50%, -50%);
@@ -245,7 +254,7 @@ button.btn.btn-primary.btn-lg {
 /* CSS Footer */
 .footer {
   font-size: 18.2px;
-  color: #868686;
+  color: $color-gray;
   &__list {
     list-style-type: none;
     padding: 0;
@@ -256,7 +265,7 @@ button.btn.btn-primary.btn-lg {
       transition: 0.4s;
       margin-bottom: 10px;
       &:hover {
-        color: #868686;
+        color: $color-gray;
       }
     }
     &.footer__list--social a {
@@ -293,16 +302,16 @@ button.btn.btn-primary.btn-lg {
       display: inline-block;
     }
     &__item {
-      color: #fff;
-      background-color: #000;
+      color: $color-white;
+      background-color: $color-black;
       font-size: 20px;
       padding: 10px 18px 8px 18px;
       border-radius: 5px;
       margin-right: 10px;
       transition: 0.4s;
       &:hover {
-        color: #fff;
-        background-color: #1f5dea;
+        color: $color-white;
+        background-color: $color-blue;
       }
     }
   }
@@ -312,15 +321,15 @@ button.btn.btn-primary.btn-lg {
     &__item {
       display: flex;
       justify-content: space-between;
-      color: #fff !important;
-      background-color: #1e59e0;
+      color: $color-white !important;
+      background-color: $color-blue;
       font-size: 15px;
       padding: 18px;
       border-radius: 5px;
       margin-top: 5px;
       transition: 0.4s;
       &:hover {
-        background-color: #000 !important;
+        background-color: $color-black !important;
       }
     }
   }
@@ -341,7 +350,7 @@ button.btn.btn-primary.btn-lg {
       margin-top: 0.5rem;
       &__date {
         margin-top: 0.3rem;
-        color: #868686;
+        color: $color-gray;
       }
       &__title {
         font-size: 21px;
@@ -394,8 +403,8 @@ button.btn.btn-primary.btn-lg {
   cursor: pointer;
   transition: 0.4s;
   &:hover {
-    color: #fff;
-    background-color: #1f5dea;
+    color: $color-white;
+    background-color: $color-blue;
   }
 }
 
@@ -416,7 +425,7 @@ button.btn.btn-primary.btn-lg {
       &__info,
       a {
         font-size: 14px;
-        color: #fff !important;
+        color: $color-white !important;
       }
       &__title {
         font-size: 23px;
@@ -426,34 +435,33 @@ button.btn.btn-primary.btn-lg {
 }
 
 @media (min-width: 768px) {
-    .container-fluid {
-        padding-right: 60px;
-        padding-left: 60px;
-      }
-    
-      .post__wrapper {
-        height: 245px;
-      }
+  .container-fluid {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .post__wrapper {
+    height: 245px;
+  }
 }
 
 .post.post--image:hover .post__wrapper:after {
-    background-color: hsla(0, 0%, 0%, 0.58);
-  }
-  
-  .post.post--image .post__details__title,
-  .post.post--image .post__details__info,
-  .post.post--image a {
-    color: #fff !important;
-  }
-  
-  .post__wrapper__categories a,
-  .post__categories a {
-    letter-spacing: 1px;
-    font-size: 12.5px;
-    font-weight: 500;
-    color: white;
-    padding: 3px 9px;
-    border-radius: 5px;
-    text-transform: uppercase;
-  }
-  
+  background-color: hsla(0, 0%, 0%, 0.58);
+}
+
+.post.post--image .post__details__title,
+.post.post--image .post__details__info,
+.post.post--image a {
+  color: $color-white !important;
+}
+
+.post__wrapper__categories a,
+.post__categories a {
+  letter-spacing: 1px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: $color-white;
+  padding: 3px 9px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
