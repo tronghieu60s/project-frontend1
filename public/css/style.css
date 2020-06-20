@@ -2,6 +2,27 @@
   font-family: "Nunito", sans-serif;
 }
 
+.post__details__bottom__social {
+    width: 50%;
+    text-align: center;
+}
+
+.post__details__bottom__info {
+    width: 50%;
+    text-align: center;
+}
+
+.post__details__bottom__social i.fa {
+    margin-right: 7px;
+}
+
+.post__details__bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 9px 0;
+    margin-top: 20px;
+}
+
 .widget__social {
   list-style-type: none;
   padding: 0;
