@@ -45,36 +45,48 @@ button.btn.btn-primary.btn-lg {
     padding: 2rem 0;
     .nav-link {
       color: $color-black !important;
-      font-size: 19px;
+      font-size: 17px;
       transition: 0.4s;
       &:hover {
         color: $color-blue !important;
       }
       .badge-pill {
-        font-size: 11px;
+        font-size: 9px;
         border-radius: 4px;
         padding: 4px;
         transform: translateY(-9px);
+        background-color: #4174bb;
       }
     }
     .navbar-brand img {
-      width: 136px;
+      width: 119px;
       margin-left: 20px;
     }
-    .navbar-toggler .fa {
-      color: $color-black;
+    .navbar-toggler {
+      padding: 7px 10px;
+      height: 100%;
+      &:focus {
+        outline: 0;
+      }
+      .fa.fa-bars {
+        font-size: 15px;
+        color: $color-black;
+      }
     }
     &__menu .nav-item {
       padding: 0 11px;
     }
     &__social {
       flex-direction: row;
+      i.fa {
+        font-size: 17px;
+      }
     }
   }
   &__topbar {
     .nav-link {
       font: {
-        size: 13.5px;
+        size: 12px;
         weight: 500;
       }
       color: $color-black2 !important;
@@ -143,7 +155,7 @@ button.btn.btn-primary.btn-lg {
     &__title {
       color: $color-black3;
       display: block;
-      font-size: 26px;
+      font-size: 23px;
       font-weight: 700;
       transition: 0.4s;
       &:hover {
@@ -155,6 +167,7 @@ button.btn.btn-primary.btn-lg {
       color: $color-gray;
       margin: 18px 0;
       align-items: center;
+      font-size: 14px;
       &__author {
         display: inline-flex;
         align-items: center;
@@ -173,12 +186,13 @@ button.btn.btn-primary.btn-lg {
       }
     }
     &__excerpt {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       color: hsla(0, 0%, 44%, 1);
       line-height: 30px;
     }
     &__bottom {
+      font-size: 14px;
       display: flex;
       justify-content: space-around;
       padding: 9px 0;
@@ -238,14 +252,15 @@ button.btn.btn-primary.btn-lg {
     .post__details {
       @include P-Absolute(50%, 50%);
       text-align: center;
-      width: 75%;
+      width: 56%;
       transform: translate(-50%, -50%);
       z-index: 10;
       &__title {
-        font-size: 32px;
+        font-size: 33px;
       }
       &__info {
         margin: 0;
+        margin-top: 10px;
       }
     }
   }
@@ -255,6 +270,10 @@ button.btn.btn-primary.btn-lg {
 .footer {
   font-size: 18.2px;
   color: $color-gray;
+  &__title-list {
+    font-size: 17px;
+    font-weight: 300;
+  }
   &__list {
     list-style-type: none;
     padding: 0;
@@ -274,12 +293,23 @@ button.btn.btn-primary.btn-lg {
     }
   }
 
+  &__back-to-top {
+    position: fixed;
+    bottom: 11%;
+    right: 5%;
+    color: #fff;
+    background-color: #000;
+    padding: 9px 17px;
+    border-radius: 5px;
+  }
+
   &__description {
+    font-size: 16px;
     line-height: 32px;
   }
 
   &__copyright {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   &__logo {
@@ -290,6 +320,7 @@ button.btn.btn-primary.btn-lg {
 /* CSS Widget */
 .widget {
   &__title {
+    font-size: 21px;
     font-weight: 700;
     padding-bottom: 20px;
     border-bottom: 1.5px solid #dee2e6;
@@ -304,7 +335,7 @@ button.btn.btn-primary.btn-lg {
     &__item {
       color: $color-white;
       background-color: $color-black;
-      font-size: 20px;
+      font-size: 15px;
       padding: 10px 18px 8px 18px;
       border-radius: 5px;
       margin-right: 10px;
@@ -323,7 +354,7 @@ button.btn.btn-primary.btn-lg {
       justify-content: space-between;
       color: $color-white !important;
       background-color: $color-blue;
-      font-size: 15px;
+      font-size: 13px;
       padding: 18px;
       border-radius: 5px;
       margin-top: 5px;
@@ -349,11 +380,12 @@ button.btn.btn-primary.btn-lg {
     &__details {
       margin-top: 0.5rem;
       &__date {
+        font-size: 13.7px;
         margin-top: 0.3rem;
         color: $color-gray;
       }
       &__title {
-        font-size: 21px;
+        font-size: 19px;
         letter-spacing: -1px;
       }
     }
@@ -370,12 +402,12 @@ button.btn.btn-primary.btn-lg {
     }
   }
   .post__details {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 0;
     font-weight: 300;
     letter-spacing: 2px;
     &__title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
     }
     &__info {
@@ -410,7 +442,7 @@ button.btn.btn-primary.btn-lg {
 
 .block__title {
   font: {
-    size: 32px;
+    size: 28px;
     weight: 700;
   }
 }
@@ -418,19 +450,23 @@ button.btn.btn-primary.btn-lg {
 /* CSS Mobile */
 @media (max-width: 992px) {
   .header__navbar__social .nav-item {
-    margin: 0 8px;
+    margin: 0 4px;
   }
   .post.post--image {
     .post__details {
+      width: 75%;
       &__info,
       a {
         font-size: 14px;
         color: $color-white !important;
       }
       &__title {
-        font-size: 23px;
+        font-size: 22px !important;
       }
     }
+  }
+  .carousel .post__details__title {
+    font-size: 13px;
   }
 }
 
@@ -458,7 +494,7 @@ button.btn.btn-primary.btn-lg {
 .post__wrapper__categories a,
 .post__categories a {
   letter-spacing: 1px;
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 500;
   color: $color-white;
   padding: 3px 9px;
