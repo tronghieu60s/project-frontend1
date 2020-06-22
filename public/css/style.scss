@@ -576,6 +576,23 @@ button.btn.btn-primary.btn-lg {
   .carousel .post__details__title {
     font-size: 13px;
   }
+  .header__navbar__menu {
+    .dropdown-menu {
+      width: 50vh;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding-top: 0;
+      .dropdown-submenu {
+        position: relative;
+        display: block;
+        &.dropdown-submenu-toggle:after {
+          height: 0;
+          border-width: 0;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
