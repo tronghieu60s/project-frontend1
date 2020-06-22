@@ -23,6 +23,7 @@ body {
 
 a {
   color: $color-black;
+  transition: 0.4s;
   &:hover {
     color: $color-black;
     text-decoration: none;
@@ -82,10 +83,67 @@ button.btn.btn-primary.btn-lg {
         color: $color-black;
       }
     }
-    &__menu .nav-item {
-      padding: 0 11px;
-      &.active .nav-link {
-        color: $color-blue !important;
+    &__menu {
+      .dropdown-menu {
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15),
+          0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+        .dropdown-submenu {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0.3rem 1.5rem;
+          clear: both;
+          font-weight: 400;
+          color: #212529;
+          text-align: inherit;
+          white-space: nowrap;
+          background-color: transparent;
+          border: 0;
+          a:hover {
+            color: $color-blue;
+          }
+          .dropdown-menu {
+            top: -9px;
+            left: 100%;
+            li {
+              display: block;
+              width: 100%;
+              padding: 0.3rem 1.5rem;
+              padding-right: 6rem;
+              clear: both;
+              font-weight: 400;
+              color: #212529;
+              text-align: inherit;
+              white-space: nowrap;
+              background-color: #fff;
+              border: 0;
+              &:hover a {
+                color: $color-blue;
+              }
+            }
+          }
+          &.dropdown-submenu-toggle:after {
+            content: "";
+            float: right;
+            height: 5px;
+            margin-left: 14px;
+            border: solid black;
+            border-width: 0px 0.5px 0.5px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      .nav-item {
+        padding: 0 11px;
+        &.active .nav-link {
+          color: $color-blue !important;
+        }
       }
     }
     &__social {
@@ -109,7 +167,7 @@ button.btn.btn-primary.btn-lg {
         width: 0;
         overflow: hidden;
         transition: all 0.4s ease;
-        .form-control{
+        .form-control {
           border-radius: 9px;
         }
       }
@@ -173,7 +231,7 @@ button.btn.btn-primary.btn-lg {
       position: absolute;
       top: 7%;
       right: 3%;
-      padding: 9px 9px 8px 9px;
+      padding: 12px 10px 10px 11px;
       border-radius: 50%;
       z-index: 10;
     }
