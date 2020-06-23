@@ -84,11 +84,26 @@ button.btn.btn-primary.btn-lg {
       }
     }
     &__menu {
+      .nav-item.dropdown {
+        .nav-link:hover ~ div.dropdown-menu,
+        .dropdown-menu:hover,
+        .dropdown-submenu.dropdown-submenu-toggle:hover ul.dropdown-menu {
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+        .dropdown-submenu.dropdown-submenu-toggle:hover ul.dropdown-menu{
+          left: 100%;
+        }
+      }
       .dropdown-menu {
         background: #ffffff;
         border: 1px solid #ffffff;
         box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.15),
           0px 5px 17px -2px rgba(0, 0, 0, 0.15);
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .4s;
         .dropdown-submenu {
           position: relative;
           display: flex;
@@ -103,12 +118,12 @@ button.btn.btn-primary.btn-lg {
           white-space: nowrap;
           background-color: transparent;
           border: 0;
-          a:hover {
+          &:hover .dropdown-submenu-link, a:hover {
             color: $color-blue;
           }
           .dropdown-menu {
             top: -9px;
-            left: 100%;
+            left: 95%;
             li {
               display: block;
               width: 100%;
