@@ -90,6 +90,7 @@ button.btn.btn-primary.btn-lg {
         .dropdown-submenu.dropdown-submenu-toggle:hover ul.dropdown-menu {
           opacity: 1 !important;
           visibility: visible !important;
+          display: block !important;
         }
         .dropdown-submenu.dropdown-submenu-toggle:hover ul.dropdown-menu{
           left: 100%;
@@ -597,6 +598,7 @@ button.btn.btn-primary.btn-lg {
       border: 0;
       box-shadow: none;
       padding-top: 0;
+      display: none;
       .dropdown-submenu {
         position: relative;
         display: block;
